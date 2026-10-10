@@ -1,0 +1,308 @@
+{
+  "version": "7.0",
+  "nodes": [
+    {
+      "id": 1,
+      "type": "start",
+      "text": "Start",
+      "x": 846,
+      "y": 16,
+      "w": 150,
+      "h": 58
+    },
+    {
+      "id": 2,
+      "type": "input",
+      "text": "DIGIT_1",
+      "x": 822,
+      "y": 109,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "text": "DIGIT_2",
+      "x": 1023,
+      "y": 109,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 4,
+      "type": "input",
+      "text": "DIGIT_3",
+      "x": 1016,
+      "y": 192,
+      "w": 190,
+      "h": 70
+    },
+    {
+      "id": 5,
+      "type": "process",
+      "text": "PELACAK_AWAL=DIGIT_1*DIGIT_3",
+      "x": 1020,
+      "y": 281,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 7,
+      "type": "decision",
+      "text": "\"APAKAH_DIGIT_2_GANJIL\"",
+      "x": 1047,
+      "y": 396,
+      "w": 122,
+      "h": 122
+    },
+    {
+      "id": 8,
+      "type": "process",
+      "text": "PELACAK_1=PELACAK_AWAL+25",
+      "x": 756,
+      "y": 420,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 9,
+      "type": "process",
+      "text": "PELACAK_1=PELACAK_AWAL-DIGIT_2",
+      "x": 1266,
+      "y": 424,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 11,
+      "type": "decision",
+      "text": "\"APAKAH_PELACAK_1_KELIPATAN_3\"",
+      "x": 1052,
+      "y": 613,
+      "w": 122,
+      "h": 122
+    },
+    {
+      "id": 12,
+      "type": "process",
+      "text": "NILAI_AKHIR=PELACAK_1/3",
+      "x": 748,
+      "y": 645,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 13,
+      "type": "process",
+      "text": "NILAI_AKHIR=PELACAK_1*2",
+      "x": 1276,
+      "y": 638,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 15,
+      "type": "decision",
+      "text": "\"NILAI_AKHIR>50\"",
+      "x": 1049,
+      "y": 824,
+      "w": 122,
+      "h": 122
+    },
+    {
+      "id": 18,
+      "type": "decision",
+      "text": "\"NILAI_AKHIR>20\"",
+      "x": 1285,
+      "y": 942,
+      "w": 122,
+      "h": 122
+    },
+    {
+      "id": 20,
+      "type": "decision",
+      "text": "\"NILAI_AKHIR%2==O\"",
+      "x": 1026,
+      "y": 1268,
+      "w": 122,
+      "h": 122
+    },
+    {
+      "id": 23,
+      "type": "end",
+      "text": "End",
+      "x": 1012,
+      "y": 1579,
+      "w": 150,
+      "h": 58
+    },
+    {
+      "id": 24,
+      "type": "process",
+      "text": "STATUS=\"KATEGORI_A\"",
+      "x": 744,
+      "y": 904,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 25,
+      "type": "process",
+      "text": "STATUS=\"KATEGORI_B\"",
+      "x": 991,
+      "y": 1023,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 26,
+      "type": "process",
+      "text": "STATUS=\"PASWORD_DITOLAK\"",
+      "x": 1445,
+      "y": 1118,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 27,
+      "type": "process",
+      "text": "SIKLUS=\"SIKLUS_GENAP\"",
+      "x": 754,
+      "y": 1424,
+      "w": 180,
+      "h": 66
+    },
+    {
+      "id": 28,
+      "type": "process",
+      "text": "SIKLUS=\"SIKLUS_GANJIL\"",
+      "x": 1239,
+      "y": 1430,
+      "w": 180,
+      "h": 66
+    }
+  ],
+  "edges": [
+    {
+      "from": 1,
+      "to": 2,
+      "branch": null
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "branch": null
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "branch": null
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "branch": null
+    },
+    {
+      "from": 5,
+      "to": 7,
+      "branch": null
+    },
+    {
+      "from": 7,
+      "to": 9,
+      "branch": "false"
+    },
+    {
+      "from": 7,
+      "to": 8,
+      "branch": "true"
+    },
+    {
+      "from": 9,
+      "to": 11,
+      "branch": null
+    },
+    {
+      "from": 8,
+      "to": 11,
+      "branch": null
+    },
+    {
+      "from": 11,
+      "to": 13,
+      "branch": "false"
+    },
+    {
+      "from": 11,
+      "to": 12,
+      "branch": "true"
+    },
+    {
+      "from": 15,
+      "to": 18,
+      "branch": "false"
+    },
+    {
+      "from": 12,
+      "to": 15,
+      "branch": null
+    },
+    {
+      "from": 13,
+      "to": 15,
+      "branch": null
+    },
+    {
+      "from": 15,
+      "to": 24,
+      "branch": "true"
+    },
+    {
+      "from": 18,
+      "to": 25,
+      "branch": "true"
+    },
+    {
+      "from": 18,
+      "to": 26,
+      "branch": "false"
+    },
+    {
+      "from": 24,
+      "to": 20,
+      "branch": null
+    },
+    {
+      "from": 25,
+      "to": 20,
+      "branch": null
+    },
+    {
+      "from": 26,
+      "to": 20,
+      "branch": null
+    },
+    {
+      "from": 20,
+      "to": 27,
+      "branch": "true"
+    },
+    {
+      "from": 20,
+      "to": 28,
+      "branch": "false"
+    },
+    {
+      "from": 27,
+      "to": 23,
+      "branch": null
+    },
+    {
+      "from": 28,
+      "to": 23,
+      "branch": null
+    }
+  ],
+  "nextId": 29
+}
